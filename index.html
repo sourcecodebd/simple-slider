@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon -->
+    <link rel="icon" sizes="192x192" type=image/x-icon" href="media/icons/javascript.ico">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5485bfc962.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>My Slider</title>
+    <style>
+        .header-span {
+            color: rgb(221, 34, 34);
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url(images/pic-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slider {
+            padding: 5px;
+            height: 500px;
+            width: 50%;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin-bottom: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(rgba(229, 192, 192, 0.6), rgba(229, 192, 192, 0.6));
+        }
+
+        .slider img {
+            width: 90%;
+            z-index: 1;
+        }
+
+        @media only screen and (max-width: 768px) {
+            body {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)), url(images/pic-1.jpg);
+                background-repeat: repeat;
+            }
+
+            .container {
+                transform: translateY(50%);
+            }
+
+            .slider {
+                height: 50%;
+                width: 100%
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Let's Explore <span class="header-span">My Slider</span></h1>
+    <section class="container">
+        <div class="slider">
+            <img id="img" src="images/pic-1.jpg" alt="">
+        </div>
+    </section>
+    <script src="slider.js"></script>
+</body>
+
+</html>
